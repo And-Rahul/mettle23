@@ -27,7 +27,7 @@ body {
     src: url(/Sequel\ 100/Sequel100Black-55.ttf);
   }
   body {
-    background: url(Gradient.png)!important;
+    background:url(Gradient.png)!important;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100% 100%;
