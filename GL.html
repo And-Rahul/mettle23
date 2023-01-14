@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mettle'23</title>
+		<link rel="stylesheet" href="guest.css" />
+		<link rel="shortcut icon" href="mettlelogo.png" type="image/x-icon">
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="https.//unpkg.com/aos@next/dist/aos.css" />
+		<style>
+			.banner-image {
+				background-image: url("banner-img.jpg");
+				background-size: cover;
+			}
+			[data-aos="new-animation"] {
+				opacity: 10;
+				transition-property: transform, opacity;
+			}
+			[data-aos="new-animation"].aos-animate {
+				opacity: 1;
+			}
+
+			@media screen and (min-width: 768px) {
+				[data-aos="new-animation"] {
+					transform: scale(1.3);
+					transition: 3s;
+				}
+				[data-aos="new-animation"].aos-animate {
+					transform: translateX(0);
+				}
+			}
+			body {
+				background-color: black !important;
+				font-family: PT Sans;
+				color: white !important;
+				width: 100% !important;
+				height: 100%;
+				margin: 0px;
+				padding: 50px;
+				overflow-x: hidden !important;
+			}
+
+			body,
+			html {
+				background-color: #000;
+				width: 100%;
+				min-height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			footer a {
+				color: #fff;
+				font-size: 14px;
+				transition-duration: 0.2s;
+			}
+
+			footer a:hover {
+				color: #fa944b;
+				text-decoration: none;
+			}
+			footer hr {
+				padding-left: 600px;
+			}
+			.copy {
+				font-size: 12px;
+				padding: 10px;
+				border-top: 1px solid #ffffff;
+			}
+
+			.footer-middle {
+				padding-top: 2em;
+				color: white;
+			}
+
+			/* footer social icons */
+
+			ul.social-network {
+				list-style: none;
+				display: inline;
+				align-content: center;
+				padding: 0;
+			}
+
+			ul.social-network li {
+				display: inline;
+				margin: 0 5px;
+			}
+
+			/* footer social icons */
+
+			.social-network a.icoFacebook:hover {
+				background-color: #3b5998;
+			}
+
+			.social-network a.icoLinkedin:hover {
+				background-color: #007bb7;
+			}
+			.social-network a.icoYoutube:hover {
+        background-color: #e70c22;
+      }
+      .social-network a.icoMedium:hover {
+        background-color: #085a05;
+      }
+
+			.social-network a.icoFacebook:hover i,
+			.social-network a.icoLinkedin:hover i,
+			.social-network a.icoYoutube:hover i,
+			.social-network a.icoMedium:hover i {
+				color: #fff;
+			}
+
+			.social-network a.socialIcon:hover,
+			.socialHoverClass {
+				color: #44bcdd;
+			}
+
+			.social-circle li a {
+				display: inline-block;
+				position: relative;
+				margin: 0 auto 0 auto;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+				font-size: 15px;
+			}
+
+			.social-circle li i {
+				margin: 0;
+				line-height: 30px;
+				text-align: center;
+			}
+
+			.social-circle li a:hover i,
+			.triggeredHover {
+				-moz-transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				-ms--transform: rotate(360deg);
+				transform: rotate(360deg);
+				-webkit-transition: all 0.2s;
+				-moz-transition: all 0.2s;
+				-o-transition: all 0.2s;
+				-ms-transition: all 0.2s;
+				transition: all 0.2s;
+			}
+
+			.social-circle i {
+				color: #595959;
+				-webkit-transition: all 0.8s;
+				-moz-transition: all 0.8s;
+				-o-transition: all 0.8s;
+				-ms-transition: all 0.8s;
+				transition: all 0.8s;
+			}
+
+			.social-network a {
+				background-color: #f9f9f9;
+			}
+			.gg {
+				display: flex;
+				justify-content: space-around;
+			}
+			@media screen and (max-width: 768px) {
+				.gg {
+					display: grid;
+					justify-content: space-evenly;
+				}
+			}
+
+
+		</style>
+		<script type="text/javascript" src="loader.js"></script>
+	</head>
+	<body>
+		<div id="loader"></div>
+		<!-- Navbar  -->
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1">
+			<div class="container" style="font-family: myNavFont;">
+				<a href="index.html" ><img src="mettlelogo.png" alt="" width="80px" height="80px"></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="mx-auto"></div>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="workshops.html">Workshops</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="GL.html">Guest Lectures</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="team.html">Team</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+  </br>
+</br>
+
+		<!-- Banner Image  -->
+
+		<body>
+      <section id="guest_lectures">
+        <img class="gl_top" src="C:\Users\BHARANIDHARAN K\Videos\GuestLec\images\gldv1.png" alt="">
+        <div class="gl_content">
+            <h1 class="gl_head" style="text-align: center; margin-bottom: 50px;">Our Speakers</h1>
+            <div class="row gl_row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gl_column">
+                     <div class="gl_column1">
+                        <img class="gl_image" src="22.jpg" alt="">
+                     </div>
+                     <div class="gl_column2">
+                         <a href="guest.html" class="gl_button gl_ins"><span class="gl_gradient"></span>Learn More</a>
+                     </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gl_column">
+                     <div class="gl_column1">
+                        <img class="gl_image" src="22.jpg" alt="">
+                     </div>
+                     <div class="gl_column2">
+                         <a href="guest.html" class="gl_button gl_ins"><span class="gl_gradient"></span>Learn More</a>
+                     </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gl_column">
+                     <div class="gl_column1">
+                        <img class="gl_image" src="22.jpg" alt="">
+                     </div>
+                     <div class="gl_column2">
+                         <a href="guest.html" class="gl_button gl_ins"><span class="gl_gradient"></span>Learn More</a>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      </body>
+
+		<footer class="mainfooter" role="contentinfo">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+
+						<ul
+							class="social-network social-circle"
+							style="
+								display: flex !important;
+								justify-content: center !important;
+							"
+						>
+							<li>
+								<a href="https://www.facebook.com/nitt.mettle/" target="_blank" class="icoFacebook" title="Facebook"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/company/mettle-nit-trichy/?originalSubdomain=in" target="_blank" class="icoLinkedin" title="Linkedin"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.instagram.com/mettle_nitt/?hl=en"
+									target="_blank"
+									class="icoFacebook"
+									title="Instagram"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://mobile.twitter.com/mettlenitt" target="_blank" class="icoLinkedin" title="Twitter"
+									><i class="fa fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/c/MettleNITTrichy" target="_blank" class="icoYoutube" title="youtube"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://medium.com/mettle-nit-trichy" target="_blank" class="icoMedium" title="medium"
+									><i class="fa fa-medium"></i
+								></a>
+							</li>
+						</ul>
+						<hr align="center" style="border-color: white; width: 320px" />
+            <p style="color: white; font-size: 15px; text-align: center">
+							Made with
+							<span style="color: #E53948; display: inline-flex; font-size: 1.8em"
+								>&hearts;</span
+							>
+							by Mettle'23
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			var nav = document.querySelector("nav");
+
+			window.addEventListener("scroll", function () {
+				if (window.pageYOffset > 100) {
+					nav.classList.add("bg-dark", "shadow");
+				} else {
+					nav.classList.remove("bg-dark", "shadow");
+				}
+			});
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		/>
+
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+			});
+		</script>
+	</body>
+</html>
+

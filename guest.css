@@ -1,0 +1,204 @@
+gl_top {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 400px) {
+  .gl_head {
+    font-size: 30px;
+  }
+  .gl_content {
+    padding: 0;
+  }
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(/Sequel\ 100/Sequel100Black-75.ttf);
+}
+@font-face {
+  font-family: myNavFont;
+  src: url(/Sequel\ 100/Sequel100Black-55.ttf);
+}
+.gl_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.gl_image:hover {
+  transform: scale(0.98);
+}
+
+.gl_content {
+  padding: 5%;
+}
+
+.gl_column1 {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 400px) {
+   .gli_column2 {
+     text-align: center;
+   }
+   .gli_p {
+     font-size: 13px;
+     line-height: 1;
+   }
+   .gli_sp {
+     font-size: 13px;
+   }
+   .gl_button {
+     font-size: 13px;
+   }
+}
+
+.gl_column {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.gl_name {
+   position: absolute;
+   margin-top: -30px;
+   color: white;
+   /* opacity: 0; */
+}
+
+.gl_button {
+	display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+  text-decoration: none;
+  box-sizing: border-box;
+	font-weight: normal;
+	box-shadow: 0 9px 18px rgba(0,0,0,0.2);
+}
+
+.gl_ins {
+	text-align: center;
+	border-radius: 10px;
+  padding: 2% 1%;
+  color: white;
+  background:  #4681f4;
+  transition: all 0.2s ease-out 0s;
+}
+
+.gl_gradient {
+	display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+  margin: auto;
+  z-index: -1;
+  background: radial-gradient(90px circle at top center, rgba(238,88,63,.8) 30%, rgba(255,255,255,0));
+  transition: all 0s ease-out 0s;
+	transform: translatex(-140px);
+	animation: 18s linear 0s infinite move;
+}
+
+@keyframes move {
+	0% {
+		transform: translatex(-140px);
+	}
+	25% {
+		transform: translatex(140px);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translatex(140px);
+		opacity: 1;
+		background: radial-gradient(90px circle at bottom center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+	75% {
+		transform: translatex(-140px);
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translatex(-140px);
+		background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+}
+
+.gli_body {
+  background-color: #003293;
+}
+
+@media (min-width: 800px) {
+  .gli_body {
+    padding: 2% 8%;
+  }
+  .gli_content {
+    padding: 3% 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  .gli_body {
+    padding: 1% 5%;
+  }
+  .gli_content {
+    padding: 0.5% 4%;
+  }
+}
+
+.gli_content {
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.gli_p {
+  font-weight: bold;
+  /* font-size: 15px; */
+  line-height: 1;
+}
+
+.gli_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.gli_column2 {
+  padding-top: 10px;
+}
+
+.gli_column1 {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 400px) {
+  .gli_button {
+    margin-bottom: 30px;
+    width: 12%;
+    padding: 1px;
+    position: relative;
+    margin-left: 0;
+  }
+  .gl_button {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .gli_button {
+    visibility: hidden;
+  }
+}
+#loader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #21242d url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
+  z-index: 1;
+}

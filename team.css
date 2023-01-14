@@ -1,0 +1,13 @@
+@media (max-width: 991px) {
+    body{
+    overflow-x: hidden;
+    }
+    .hi-slide{
+        margin-left:  -215px !important;
+        overflow: hidden;
+        width: 157vw !important;
+    }
+    .navbar{
+        width: 100vw;
+    }
+}

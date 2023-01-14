@@ -1,0 +1,358 @@
+.gl_top {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+}
+body {
+  background: linear-gradient(180deg, rgba(15, 3, 5, 0.2) -162.91%, #0F0305 100%), url(samplebg1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+@media (max-width: 400px) {
+  .gl_head {
+    font-size: 30px;
+  }
+  .gl_content {
+    padding: 0;
+  }
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(/Sequel\ 100/Sequel100Black-75.ttf);
+}
+@font-face {
+  font-family: myHeadingFont;
+  src: url(/Sequel\ 100/Sequel100Black-45.ttf);
+}
+@font-face {
+  font-family: myNavFont;
+  src: url(/Sequel\ 100/Sequel100Black-55.ttf);
+}
+@font-face {
+  font-family: myFont;
+  src: url(/DM_Sans/DMSans-Regular.ttf);
+}
+.gl_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.gl_image:hover {
+  transform: scale(0.98);
+}
+
+.gl_content {
+  padding: 5%;
+}
+
+.gl_column1 {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 400px) {
+   .gli_column2 {
+     text-align: center;
+   }
+   .gli_p {
+     font-size: 13px;
+     line-height: 1;
+   }
+   .gli_sp {
+     font-size: 13px;
+   }
+   .gl_button {
+     font-size: 13px;
+   }
+}
+
+.gl_column {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.gl_name {
+   position: absolute;
+   margin-top: -30px;
+   color: white;
+   /* opacity: 0; */
+}
+
+.gl_button {
+	display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+  text-decoration: none;
+  box-sizing: border-box;
+	font-weight: normal;
+	box-shadow: 0 9px 18px rgba(0,0,0,0.2);
+}
+
+.gl_ins {
+	text-align: center;
+	border-radius: 10px;
+  padding: 2% 1%;
+  color: white;
+  background:  #4681f4;
+  transition: all 0.2s ease-out 0s;
+}
+
+.gl_gradient {
+	display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+  margin: auto;
+  z-index: -1;
+  background: radial-gradient(90px circle at top center, rgba(238,88,63,.8) 30%, rgba(255,255,255,0));
+  transition: all 0s ease-out 0s;
+	transform: translatex(-140px);
+	animation: 18s linear 0s infinite move;
+}
+
+@keyframes move {
+	0% {
+		transform: translatex(-140px);
+	}
+	25% {
+		transform: translatex(140px);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translatex(140px);
+		opacity: 1;
+		background: radial-gradient(90px circle at bottom center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+	75% {
+		transform: translatex(-140px);
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translatex(-140px);
+		background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+}
+
+.gli_body {
+  background-color: #003293;
+}
+
+@media (min-width: 800px) {
+  .gli_body {
+    padding: 2% 8%;
+  }
+  .gli_content {
+    padding: 3% 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  .gli_body {
+    padding: 1% 5%;
+  }
+  .gli_content {
+    padding: 0.5% 4%;
+  }
+}
+
+.gli_content {
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.gli_p {
+  font-weight: bold;
+  /* font-size: 15px; */
+  line-height: 1;
+}
+
+.gli_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.gli_column2 {
+  padding-top: 10px;
+}
+
+.gli_column1 {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 400px) {
+  .gli_button {
+    margin-bottom: 30px;
+    width: 12%;
+    padding: 1px;
+    position: relative;
+    margin-left: 0;
+  }
+  .gl_button {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .gli_button {
+    visibility: hidden;
+  }
+}
+footer {
+  background: rgb(0, 11, 19) !important;
+  background: -webkit-linear-gradient(59deg, rgb(0, 5, 7), rgb(0, 4, 7));
+  background: linear-gradient(59deg, rgb(0, 3, 5), rgb(0, 3, 5));
+  color: white;
+  margin-top:100px;
+  
+  }
+  
+  footer a {
+      color: #fff;
+      font-size: 14px;
+      transition-duration: 0.2s;
+  }
+  
+  footer a:hover {
+      color: #FA944B;
+      text-decoration: none;
+  }
+  footer hr {
+      padding-left: 600px;
+  }
+  .copy {
+      font-size: 12px;
+      padding: 10px;
+      border-top: 1px solid #FFFFFF;
+  }
+  
+  .footer-middle {
+      padding-top: 2em;
+      color: white;
+  }
+  
+  
+  
+  /* footer social icons */
+  
+  ul.social-network {
+      list-style: none;
+      display: inline;
+      align-content: center;
+      padding: 0;
+  }
+  
+  ul.social-network li {
+      display: inline;
+      margin: 0 5px;
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+      background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+      background-color: #007bb7;
+  }
+  
+  .social-network a.icoYoutube:hover {
+    background-color: #e70c22;
+  }
+  .social-network a.icoMedium:hover {
+    background-color: #085a05;
+  }
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i,
+  .social-network a.icoYoutube:hover i,
+  .social-network a.icoMedium:hover i {
+      color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+      color: #44BCDD;
+  }
+  
+  .social-circle li a {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto 0 auto;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+  }
+  
+  .social-circle li i {
+      margin: 0;
+      line-height: 30px;
+      text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -ms--transform: rotate(360deg);
+      transform: rotate(360deg);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      transition: all 0.2s;
+  }
+  
+  .social-circle i {
+      color: #595959;
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+      transition: all 0.8s;
+  }
+  
+  .social-network a {
+      background-color: #F9F9F9;
+  }
+
+  .hr-line{
+      border-color:white;
+      border-width:3px;
+      
+      
+  }
+
+#loader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #21242d url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
+  z-index: 1;
+}
+
+.ccc{
+  background-color: #e539471c;
+  padding: 20px;
+  border-style: solid;
+  border-color: #F1B0FC;
+  border-radius: 1rem;
+}
+.description{
+  color:grey;
+}

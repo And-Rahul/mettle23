@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mettle'23</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" href="mettlelogo.png" type="image/x-icon">
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="https.//unpkg.com/aos@next/dist/aos.css" />
+		<style>
+			.banner-image {
+				background-image: url("banner-img.jpg");
+				background-size: cover;
+			}
+			[data-aos="new-animation"] {
+				opacity: 10;
+				transition-property: transform, opacity;
+			}
+			[data-aos="new-animation"].aos-animate {
+				opacity: 1;
+			}
+
+			@media screen and (min-width: 768px) {
+				[data-aos="new-animation"] {
+					transform: scale(1.3);
+					transition: 3s;
+				}
+				[data-aos="new-animation"].aos-animate {
+					transform: translateX(0);
+				}
+			}
+			body {
+				background-color: black !important;
+				font-family: PT Sans;
+				color: white !important;
+				width: 100% !important;
+				height: 100%;
+				margin: 0px;
+				padding: 50px;
+				overflow-x: hidden !important;
+			}
+
+			body,
+			html {
+				background-color: #000;
+				width: 100%;
+				min-height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			footer a {
+				color: #fff;
+				font-size: 14px;
+				transition-duration: 0.2s;
+			}
+
+			footer a:hover {
+				color: #fa944b;
+				text-decoration: none;
+			}
+			footer hr {
+				padding-left: 600px;
+			}
+			.copy {
+				font-size: 12px;
+				padding: 10px;
+				border-top: 1px solid #ffffff;
+			}
+
+			.footer-middle {
+				padding-top: 2em;
+				color: white;
+			}
+
+			/* footer social icons */
+
+			ul.social-network {
+				list-style: none;
+				display: inline;
+				align-content: center;
+				padding: 0;
+			}
+
+			ul.social-network li {
+				display: inline;
+				margin: 0 5px;
+			}
+
+			/* footer social icons */
+
+			.social-network a.icoFacebook:hover {
+				background-color: #3b5998;
+			}
+
+			.social-network a.icoLinkedin:hover {
+				background-color: #007bb7;
+			}
+			.social-network a.icoYoutube:hover {
+        background-color: #e70c22;
+      }
+      .social-network a.icoMedium:hover {
+        background-color: #085a05;
+      }
+
+			.social-network a.icoFacebook:hover i,
+			.social-network a.icoLinkedin:hover i,
+			.social-network a.icoYoutube:hover i,
+			.social-network a.icoMedium:hover i {
+				color: #fff;
+			}
+
+			.social-network a.socialIcon:hover,
+			.socialHoverClass {
+				color: #44bcdd;
+			}
+
+			.social-circle li a {
+				display: inline-block;
+				position: relative;
+				margin: 0 auto 0 auto;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+				font-size: 15px;
+			}
+
+			.social-circle li i {
+				margin: 0;
+				line-height: 30px;
+				text-align: center;
+			}
+
+			.social-circle li a:hover i,
+			.triggeredHover {
+				-moz-transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				-ms--transform: rotate(360deg);
+				transform: rotate(360deg);
+				-webkit-transition: all 0.2s;
+				-moz-transition: all 0.2s;
+				-o-transition: all 0.2s;
+				-ms-transition: all 0.2s;
+				transition: all 0.2s;
+			}
+
+			.social-circle i {
+				color: #595959;
+				-webkit-transition: all 0.8s;
+				-moz-transition: all 0.8s;
+				-o-transition: all 0.8s;
+				-ms-transition: all 0.8s;
+				transition: all 0.8s;
+			}
+
+			.social-network a {
+				background-color: #f9f9f9;
+			}
+			.gg {
+				display: flex;
+				justify-content: space-around;
+			}
+			@media screen and (max-width: 768px) {
+				.gg {
+					display: grid;
+					justify-content: space-evenly;
+				}
+			}
+			#loader{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #21242d url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
+      z-index: 1;
+    }
+	.nav-item .active{
+		background-color:#E53948!important;
+	}
+	.nav-item .active:hover{
+		background-color:transparent!important;
+	}
+#schedule li a {
+  display: block;
+  background-color: #570007;
+  font-family: myHeadingFont;
+  color: white!important;
+  text-align: center;
+  padding: 16px 16px 0  16px;
+  text-decoration: none;
+  border-radius: 50px 50px 0 0;
+}
+#schedule ul{
+	margin-bottom: 0px;
+}
+#schedule li a:hover {
+  color:#E53948!important;
+  background-color: transparent;
+  border: 2px solid #E53948 ;
+  padding: 14px 14px 0  14px;
+
+}
+		</style>
+		<script type="text/javascript" src="loader.js"></script>
+	</head>
+	<body>
+		<div id="loader"></div>
+		<!-- Navbar  -->
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1">
+			<div class="container" style="font-family: myNavFont;">
+				<a href="index.html" ><img src="mettlelogo.png" alt="" width="80px" height="80px"></a>
+				<button
+				id="navbutton"
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="mx-auto"></div>
+					<ul class="navbar-nav">
+
+						<li class="nav-item">
+							<a class="nav-link text-white" href="index.html">Home</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link text-white"  href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="workshops.html">Workshops</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: #E53948;" href="schedule.html">Schedule</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="team.html">Team</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link text-white" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Banner Image  -->
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<h1 style="text-align: center; color: #E53948; font-family: myFirstFont; font-size: 8vw; width: 70vw; margin: auto;">SCHEDULE</h1>
+		<br />
+		<br />
+
+    
+
+	<section id="schedule" class="section-with-bg">
+		<div class="container" data-aos="fade-up">
+			<div class="schedule-dates">
+		  <ul class="text-center" role="tablist" >
+			<li class="nav-item" style="margin-right: 30px;">
+			  <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">27th <br> <span style="font-size: 10px;">FRI</span></a>
+			</li>
+			<li class="nav-item" style="margin-right: 30px;">
+			  <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">28th <br><span style="font-size: 10px;">SAT</span></a>
+			</li>
+			<li class="nav-item" style="margin-right: 30px;">
+			  <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">29th <br><span style="font-size: 10px;">SUN</span></a>
+			</li>
+		  </ul>
+		  </div>
+		  <div  class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+  
+			<!-- Schdule Day 1 -->
+			<div style="font-style: myFont; padding: 20px; border: 2px solid rgba(252, 176, 190, 0.6); border-radius: 16px; background:  linear-gradient(137.74deg, rgba(115, 77, 82, 0.15) 0%, rgba(115, 77, 81, 0.045) 101.31%);" role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+  
+			  <div class="row schedule-item" style="padding: 20px;">
+				<div style="color:#E53948" class="col-md-2"><time>10:00 AM - 12:30 PM</time></div>
+				<div class="col-md-10">
+				  <h4>INAGURATION + GL</h4>
+				  <!-- <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p> -->
+				</div>
+			  </div>
+  
+			  <div class="row schedule-item" style="padding: 20px;">
+				<div style="color:#E53948" class="col-md-2"><time>02:00 PM - 04:00 PM</time></div>
+				<div class="col-md-10">
+				  
+				  <h4>Keynote <span>3d Printing - Workshop </span></h4>
+				  <!-- <p>Facere provident incidunt quos voluptas.</p> -->
+				</div>
+			  </div>
+  
+			  <div class="row schedule-item" style="padding: 20px;">
+				<div style="color:#E53948" class="col-md-2"><time>04:00 PM - 06:00 PM</time></div>
+				<div class="col-md-10">
+				  
+				  <h4>Combinatorals</h4>
+				  <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+				</div>
+			  </div>
+  
+			  <div class="row schedule-item" style="padding: 20px;">
+				<div style="color:#E53948"  class="col-md-2"><time>06:15 PM - 07:00 PM</time></div>
+				<div class="col-md-10">
+				  
+				  <h4>Chain of words  - Informals</h4>
+				  <!-- <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p> -->
+				</div>
+			  </div>
+  
+			  
+  
+			</div>
+			<!-- End Schdule Day 1 -->
+  
+			<!-- Schdule Day 2 -->
+			<div style="padding: 20px; border: 2px solid rgba(252, 176, 190, 0.6); border-radius: 16px; background:  linear-gradient(137.74deg, rgba(115, 77, 82, 0.15) 0%, rgba(115, 77, 81, 0.045) 101.31%);" role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+  
+				<div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948" class="col-md-2"><time>10:00 AM - 12:00 PM</time></div>
+					<div class="col-md-10">
+					  <h4>IIM Quiz - Round 1</h4>
+					  <!-- <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p> -->
+					</div>
+				  </div>
+	  
+				  <div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948" class="col-md-2"><time>12:30 PM - 04:30 PM</time></div>
+					<div class="col-md-10">
+					  
+					  <h4>Keynote <span>Material Informatics - Workshop </span></h4>
+					  <!-- <p>Facere provident incidunt quos voluptas.</p> -->
+					</div>
+				  </div>
+	  
+				  <div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948" class="col-md-2"><time>04:30 PM - 06:45 PM</time></div>
+					<div class="col-md-10">
+					  
+					  <h4>What If</h4>
+					  <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+					</div>
+				  </div>
+	  
+				  <div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948"  class="col-md-2"><time>06:45 PM - 07:30 PM</time></div>
+					<div class="col-md-10">
+					  
+					  <h4>Quintuples  - Informals</h4>
+					  <!-- <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p> -->
+					</div>
+				  </div>
+	  
+			</div>
+			<!-- End Schdule Day 2 -->
+  
+			<!-- Schdule Day 3 -->
+			<div style="padding: 20px; border: 2px solid rgba(252, 176, 190, 0.6); border-radius: 16px; background:  linear-gradient(137.74deg, rgba(115, 77, 82, 0.15) 0%, rgba(115, 77, 81, 0.045) 101.31%);" role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+  
+				<div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948" class="col-md-2"><time>09:30 AM - 10:45 AM</time></div>
+					<div class="col-md-10">
+					  <h4>IIM Quiz - Round 2</h4>
+					  <!-- <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p> -->
+					</div>
+				  </div>
+	  
+				  <div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948" class="col-md-2"><time>09:30 AM - 10:45 AM</time></div>
+					<div class="col-md-10">
+					  
+					  <h4>Keynote <span>Industrial GL </span></h4>
+					  <!-- <p>Facere provident incidunt quos voluptas.</p> -->
+					</div>
+				  </div>
+	  
+				  <div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948" class="col-md-2"><time>10:45 AM - 01:45 PM</time></div>
+					<div class="col-md-10">
+					  
+					  <h4>Ace the Case</h4>
+					  <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+					</div>
+				  </div>
+	  
+				  <div class="row schedule-item" style="padding: 20px;">
+					<div style="color:#E53948"  class="col-md-2"><time>03:00 PM - 05:00 PM</time></div>
+					<div class="col-md-10">
+					  
+					  <h4>NDT - Workshop</h4>
+					  <!-- <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p> -->
+					</div>
+				  </div>
+  
+			</div>
+			<!-- End Schdule Day 3 -->
+  
+		  </div>
+  
+		</div>
+  
+	  </section><!-- End Schedule Section -->
+
+
+	  	<br>
+		<br>
+				<!--timer-->
+				<div style="display: flex; font-family: myHeadingFont; padding-top: 5vw;" class="timer text-center">
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;" ><p style="font-size :10vw;" id="d1"></p></div> 
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="d2"></p></div>
+					</div>
+					<p style="font-size :10vw; color: #E53948;">:</p>
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="h1"></p></div> 
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="h2"></p></div>
+					</div>
+					<p style="font-size :10vw; color: #E53948;">:</p>
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="m1"></p></div> 
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="m2"></p></div>
+					</div>
+					<p style="font-size :10vw; color: #E53948;">:</p>
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="s1"></p></div>
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="s2"></p></div>
+					</div>
+				</div>
+					<div style="display: flex; padding-left: 5vw;" class="text-center"> 
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Days</p>
+						</div>
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Hours</p>
+						</div>
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Minutes</p>
+						</div>
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Seconds</p>
+						</div>
+						
+					</div>
+				<br/>
+				<!--timer-->
+				<div class="text-center">
+				<button style="padding: 14px 29px;
+				width: 284px;
+				background: #E53948;
+				border: 2px solid transparent;
+				color: white;
+				font-family: myNavFont;
+				font-size: 15px;
+				">Register for Mettle '23</button>
+				</div>
+
+				<br/>
+				<br/>
+
+	<footer class="mainfooter" role="contentinfo">
+		<div class="container">
+	<br/>
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<ul
+						class="social-network social-circle"
+						style="
+							display: flex !important;
+							justify-content: center !important;
+						"
+					>
+						<li>
+							<a
+								href="https://www.facebook.com/nitt.mettle/"
+								target="_blank"
+								class="icoFacebook"
+								title="Facebook"
+								><i class="fa fa-facebook"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/company/mettle-nit-trichy/?originalSubdomain=in"
+								target="_blank"
+								class="icoLinkedin"
+								title="Linkedin"
+								><i class="fa fa-linkedin"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/mettle_nitt/?hl=en"
+								target="_blank"
+								class="icoFacebook"
+								title="Instagram"
+								><i class="fa fa-instagram"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://mobile.twitter.com/mettlenitt"
+								target="_blank"
+								class="icoLinkedin"
+								title="Twitter"
+								><i class="fa fa-twitter"></i
+							></a>
+							</li>
+							<li>
+							<a
+								href="https://www.youtube.com/c/MettleNITTrichy"
+								target="_blank"
+								class="icoYoutube"
+								title="youtube"
+								><i class="fa fa-youtube"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://medium.com/mettle-nit-trichy"
+								target="_blank"
+								class="icoMedium"
+								title="fa-medium"
+								><i class="fa fa-medium"></i
+							></a>
+						</li>
+					</ul>
+					<hr align="center" style="border-color: white; width: 320px" />
+		<p style="color: white; font-size: 15px; text-align: center">
+						Made with
+						<span style="color: #E53948; display: inline-flex; font-size: 1.8em"
+							>&hearts;</span
+						>
+						by Mettle'23
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+		<script type="text/javascript">
+			var nav = document.querySelector("nav");
+			let button = document.querySelector('#navbutton');
+			button.addEventListener("click",()=>{
+				nav.classList.add("nav-bg", "shadow");
+				});
+			window.addEventListener("scroll", function () {
+				if (window.pageYOffset > 100) {
+					nav.classList.add("nav-bg", "shadow");
+				} else {
+					nav.classList.remove("nav-bg", "shadow");
+				}
+			});
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		/>
+
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+			});
+		</script>
+
+<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Jan 27, 2023 00:00:00").getTime();
+	
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+	
+	  // Get today's date and time
+	  var now = new Date().getTime();
+		
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+		
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		
+	  // Output the result in an element with id="demo"
+	//   document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+	//   + minutes + " : " + seconds ;
+	  document.getElementById("d1").innerHTML= Math.floor(days/10);
+	  document.getElementById("d2").innerHTML= days%10;
+	  document.getElementById("h1").innerHTML= Math.floor(hours/10);
+	  document.getElementById("h2").innerHTML= hours%10;
+	  document.getElementById("m1").innerHTML= Math.floor(minutes/10);
+	  document.getElementById("m2").innerHTML= minutes%10;
+	  document.getElementById("s1").innerHTML= Math.floor(seconds/10);
+	  document.getElementById("s2").innerHTML= seconds%10;
+	
+	  // If the count down is over, write some text 
+	  if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("demo").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
+	</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	</body>
+</html>

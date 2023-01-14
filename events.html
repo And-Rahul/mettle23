@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mettle'23</title>
+		<link rel="stylesheet" href="events.css" />
+		<link rel="stylesheet" href="styles.css" />
+
+		<link rel="shortcut icon" href="mettlelogo.png" type="image/x-icon">
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="https.//unpkg.com/aos@next/dist/aos.css" />
+		<style>
+			.banner-image {
+        background: linear-gradient(180deg, rgba(15, 3, 5, 0.2) -162.91%, #0F0305 100%), url(samplebg1.png);
+				background-size: cover;
+			}
+			[data-aos="new-animation"] {
+				opacity: 10;
+				transition-property: transform, opacity;
+			}
+			[data-aos="new-animation"].aos-animate {
+				opacity: 1;
+			}
+
+			@media screen and (min-width: 768px) {
+				[data-aos="new-animation"] {
+					transform: scale(1.3);
+					transition: 3s;
+				}
+				[data-aos="new-animation"].aos-animate {
+					transform: translateX(0);
+				}
+			}
+			body {
+				background-color: black !important;
+				font-family: PT Sans;
+				color: white !important;
+				width: 100% !important;
+				height: 100%;
+				margin: 0px;
+				padding: 50px;
+				overflow-x: hidden !important;
+			}
+
+			body,
+			html {
+				background-color: #000;
+				width: 100%;
+				min-height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			footer a {
+				color: #fff;
+				font-size: 14px;
+				transition-duration: 0.2s;
+			}
+
+			footer a:hover {
+				color: #fa944b;
+				text-decoration: none;
+			}
+			footer hr {
+				padding-left: 600px;
+			}
+			.copy {
+				font-size: 12px;
+				padding: 10px;
+				border-top: 1px solid #ffffff;
+			}
+
+			.footer-middle {
+				padding-top: 2em;
+				color: white;
+			}
+
+			/* footer social icons */
+
+			ul.social-network {
+				list-style: none;
+				display: inline;
+				align-content: center;
+				padding: 0;
+			}
+
+			ul.social-network li {
+				display: inline;
+				margin: 0 5px;
+			}
+
+			/* footer social icons */
+
+			.social-network a.icoFacebook:hover {
+				background-color: #3b5998;
+			}
+
+			.social-network a.icoLinkedin:hover {
+				background-color: #007bb7;
+			}
+
+			.social-network a.icoFacebook:hover i,
+			.social-network a.icoLinkedin:hover i {
+				color: #fff;
+			}
+
+			.social-network a.socialIcon:hover,
+			.socialHoverClass {
+				color: #44bcdd;
+			}
+
+			.social-circle li a {
+				display: inline-block;
+				position: relative;
+				margin: 0 auto 0 auto;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+				font-size: 15px;
+			}
+
+			.social-circle li i {
+				margin: 0;
+				line-height: 30px;
+				text-align: center;
+			}
+
+			.social-circle li a:hover i,
+			.triggeredHover {
+				-moz-transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				-ms--transform: rotate(360deg);
+				transform: rotate(360deg);
+				-webkit-transition: all 0.2s;
+				-moz-transition: all 0.2s;
+				-o-transition: all 0.2s;
+				-ms-transition: all 0.2s;
+				transition: all 0.2s;
+			}
+
+			.social-circle i {
+				color: #595959;
+				-webkit-transition: all 0.8s;
+				-moz-transition: all 0.8s;
+				-o-transition: all 0.8s;
+				-ms-transition: all 0.8s;
+				transition: all 0.8s;
+			}
+
+			.social-network a {
+				background-color: #f9f9f9;
+			}
+			.gg {
+				display: flex;
+				justify-content: space-around;
+			}
+			@media screen and (max-width: 768px) {
+				.gg {
+					display: grid;
+					justify-content: space-evenly;
+				}
+			}
+
+      /* The Modal (background) */
+          .mdl {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 2000; /* Sit on top */
+            padding:   0; /* Location of the box */
+            left: 0;
+            top: 0;
+            margin-top: 20px;
+            width: 100%; /* Full width */
+            height: 100vh; /* Full height */
+            overflow:scroll; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+          }
+
+          /* Modal Content */
+          .mdl-content {
+            
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #888;
+            width: 100%;
+            border: 1.5px solid rgba(230, 163, 143, 0.6); 
+            border-radius: 20px; 
+            background: linear-gradient(180deg, rgba(30, 15, 18, 0.8) 0%, rgba(30, 9, 12, 0.8) 100%);
+          }
+
+          /* The Close Button */
+          .closer {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 15px;
+          }
+
+          .closer:hover,
+          .closer:focus {
+            color:#E53948;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          iframe.doc-content{
+            padding: 24px!important;
+          }
+          iframe{
+            margin: auto;
+            width: 60%;
+            height: 80vh;
+            align-self:center;
+      
+          }
+          @media (max-width:900px) {
+            .mdl-content{
+              width: 100%;
+            }
+            .mdl{
+              padding: 5px;
+            }
+            iframe{
+              width: 100%;
+            }
+          }
+		</style>
+    <script type="text/javascript" src="loader.js"></script>
+	</head>
+	<body>
+    <div id="loader"></div>
+		<!-- Navbar  -->
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1">
+			<div class="container" style="font-family: myNavFont;">
+        <a href="index.html" ><img src="mettlelogo.png" alt="" width="80px" height="80px"></a>
+				<button
+        id="navbutton"
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="mx-auto"></div>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="index.html">Home</a>
+						</li>
+            <li class="nav-item">
+							<a class="nav-link text-white"  href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="workshops.html">Workshops</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: #E53948;"  href="events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="schedule.html">Schedule</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="team.html">Team</a>
+						</li>
+            <li class="nav-item">
+							<a class="nav-link text-white" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Banner Image  -->
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<h1 class="text-center" style="color: #E53948; font-family: myFirstFont; font-size: 8vw; width: 70vw; margin: auto;">EVENTS</h1>
+    <p class="text-center" style="width: 65vw; font-family: myFont; margin: auto;">Discover the infinite at Mettle and unlock the mysteries of fractals for a chance to win prizes!</p>
+		<br />
+		<br />
+        <!--Prefest-->
+        <div class=" text-center">
+          <h1 style="font-family: myHeadingFont; font-size: 4vw;">Prefest Events</h1>
+        </div>
+    
+        <div class = "container">
+          <div class = "row pb-5 d-flex flex-row justify-content-center">
+              <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+                  <div class="image">
+                    <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+                  
+                    <div class="content" style="font-family: myFont;">
+                     <br>
+                      <div class="header" style="color: #3EB6E6; font-size: 24px;">Photochromic</div>
+                      <div class="description" style="font-size: 16px;">
+                        Photography is a  very special medium that gives a realization of how rich reality is. Here comes an opportunity to show your mettle in “freezing the right moment.” Mettle’23 presents you with Photochromic, our themed photography event. Grab your cameras! Tweak your creativity!! Capture the best!
+                      </div>
+                      <br>
+                      <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> 1st: ₹ 1250 + Voucher worth ₹2000	<br>
+                        <span class="bi bi-trophy-fill"></span> 2nd: ₹ 750 + Voucher worth ₹2000<br>
+                        <span class="bi bi-trophy-fill"></span> 3rd: ₹ 500 + Voucher worth ₹2000
+                        </h1>
+                      <h1 class="header" style="color:#E53948; font-size: 16px;">Jan 9, 2023 - Jan 27, 2023</h1>
+                      <div class="text-center">
+                        <br>
+                        <div class="home-buttons" style="display: flex;
+                        align-items: flex-start;
+                        padding: 0px;
+                        gap: 48px;
+                        justify-content: center;
+                        margin: auto;
+                        ">
+                        <form action="https://forms.gle/HwwxZfKsqR8HmTCM7" method="get" target="_blank">
+                        <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button>
+                        </form>
+                        <button id="myBtn" onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    <!--Events-->
+    <div class=" text-center">
+      <h1 style="font-family: myHeadingFont; font-size: 4vw;">Events</h1>
+    </div>
+
+    <div class = "container">
+      <div class = "row  d-flex flex-row justify-content-center">
+          <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+              <div class="image">
+                <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+              
+                <div class="content" style="font-family: myFont;">
+                 <br>
+                  <div class="header" style="color: #3EB6E6; font-size: 24px;">what If</div>
+                  <div class="description" style="font-size: 16px;">
+                    Are you among those who dream of wispy ideas turning corporeal? An idealist whose mind is ever attuned to the what ifs?  Here’s our handcrafted event, “WHAT IF,” that puts to test how well radical thinkers question every momentous development. Prove your mettle with your eloquence on the given set of perpetual fractals!
+                  </div>
+                  <br>
+                  <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> 1st: ₹ 1250 + Voucher worth ₹2000	<br>
+                    <span class="bi bi-trophy-fill"></span> 2nd: ₹ 750 + Voucher worth ₹2000<br>
+                    <span class="bi bi-trophy-fill"></span> 3rd: ₹ 500 + Voucher worth ₹2000
+                    </h1>
+                  <h1 class="header" style="color:#E53948; font-size: 16px;">28th January, 04:30 PM - 06:45 PM</h1>
+                  <div class="text-center">
+                    <br>
+                    <div class="home-buttons" style="display: flex;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 48px;
+                    justify-content: center;
+                    margin: auto;
+                    ">
+                        <form action="https://forms.gle/CuRjCKLwZ697ojSU7" method="get" target="_blank">
+                    <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button></form>
+                    <button id="myBtn1" onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+            <div class="image">
+              <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+            
+              <div class="content" style="font-family: myFont;">
+               <br>
+                <div class="header" style="color: #3EB6E6; font-size: 24px;">Metal Mania</div>
+                <div class="description" style="font-size: 16px;">
+                  Listen to learn and Introspect to improve. Organized by the acclaimed Indian Institute of Metals, Trichy chapter, Mettle’23 presents a challenge, a culmination of questions covering the vast domain of science to Introspect yourself in this boundless domain of Metallurgy and Material science. Harness your observation!! Sharpen Your aptitude! Show your Mettle and Improve!
+                </div>
+                <br>
+                <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> INR 3000</h1>
+                <h1 class="header" style="color:#E53948; font-size: 16px;">28th January, 10:00 AM - 12:00 PM - Round 1</h1>
+                <h1 class="header" style="color:#E53948; font-size: 16px;">29th January, 09:30 AM - 10:45 AM - Round 2</h1>
+                <div class="text-center">
+                  <br>
+                  <div class="home-buttons" style="display: flex;
+                  align-items: flex-start;
+                  padding: 0px;
+                  gap: 48px;
+                  justify-content: center;
+                  margin: auto;
+                  ">
+                        <form action="https://forms.gle/TGc2o3pL25jNKzDF6" method="get" target="_blank">
+                  <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button></form>
+                  <button id="myBtn2" onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class = "row pb-5 d-flex flex-row justify-content-center">
+        <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+            <div class="image">
+              <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+            
+              <div class="content" style="font-family: myFont;">
+               <br>
+                <div class="header" style="color: #3EB6E6; font-size: 24px;">Ace the Case</div>
+                <div class="description" style="font-size: 16px;">
+                  Are you ready to put your metallurgical or materials science skills to the test? Join the Mettle'23 case study event and find out! Participants will be given a real-world problem to solve, just like a professional in the field. Teams of up to 3 members or individuals can take on the challenge. On the final day of the symposium, present your solution in a 5-10 minute presentation to a panel of judges. The winning team or individual will be awarded a cash prize. Don't miss this exciting opportunity to put yourself in the shoes of a metallurgist or materials scientist and solve a real problem!
+                </div>
+                <br>
+                <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> 1st: ₹ 1250 + Voucher worth ₹2000	<br>
+                  <span class="bi bi-trophy-fill"></span> 2nd: ₹ 750 + Voucher worth ₹2000<br>
+                  <span class="bi bi-trophy-fill"></span> 3rd: ₹ 500 + Voucher worth ₹2000</h1>
+                <h1 class="header" style="color:#E53948; font-size: 16px;">29th January, 10:45 AM - 01:45 PM</h1>
+                <div class="text-center">
+                  <br>
+                  <div class="home-buttons" style="display: flex;
+                  align-items: flex-start;
+                  padding: 0px;
+                  gap: 48px;
+                  justify-content: center;
+                  margin: auto;
+                  ">
+                        <form action="https://forms.gle/Jki8EBEMoUDtJmch9" method="get" target="_blank">
+                  <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button></form>
+                  <button id="myBtn3" onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+          <div class="image">
+            <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+          
+            <div class="content" style="font-family: myFont;">
+             <br>
+              <div class="header" style="color: #3EB6E6; font-size: 24px;">Combinatorials</div>
+              <div class="description" style="font-size: 16px;">
+                Are you a materials science enthusiast looking for an exciting new challenge? Look no further! Combinatorials - Our Materials Selection Event is the perfect opportunity for you to showcase your expertise and innovative thinking. With a series of problem statements covering a wide range of materials-related challenges, you'll have the chance to suggest the best material for the job and demonstrate why it's the optimal choice. Whether you're a seasoned materials scientist or a budding engineer, this event is sure to provide plenty of opportunities to learn, grow, and shine. So don't wait – sign up now and join us on the cutting edge of materials science!
+              </div>
+              <br>
+              <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> 1st: ₹ 1250 + Voucher worth ₹2000	<br>
+                <span class="bi bi-trophy-fill"></span> 2nd: ₹ 750 + Voucher worth ₹2000<br>
+                <span class="bi bi-trophy-fill"></span> 3rd: ₹ 500 + Voucher worth ₹2000
+                </h1>
+              <h1 class="header" style="color:#E53948; font-size: 16px;">27th January, 04:00 PM - 06:00 PM</h1>
+              <div class="text-center">
+                <br>
+                <div class="home-buttons" style="display: flex;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 48px;
+                justify-content: center;
+                margin: auto;
+                ">
+                        <form action="https://forms.gle/NCx5y4NvGUdEpvD86" method="get" target="_blank">
+                <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button></form>
+                <button id="myBtn4" onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+    </div>
+
+<!--Informals-->
+
+<div class=" text-center">
+  <h1 style="font-family: myHeadingFont; font-size: 4vw;">Informals</h1>
+</div>
+
+<div class="container">
+  <div class = "row pb-5 d-flex flex-row justify-content-center">
+    <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+        <div class="image">
+          <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+        
+          <div class="content" style="font-family: myFont;">
+           <br>
+            <div class="header" style="color: #3EB6E6; font-size: 24px;">Chain of Words</div>
+            <div class="description" style="font-size: 18px;">
+              In this game, a person will start by saying a metallurgy word, and the next person should continue the game by telling a metallurgy word starting with the previous person’s word’s last letter.
+              <br>For example, if a person tells Alloy, then the next person should say any metallurgy word starting with the letter Y . If he/she tells it right, they can be in the game, but if they can’t, then they will be out of the game.
+
+            </div>
+            <br>
+            <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> Goodies / Merch</h1>
+            <h1 class="header" style="color:#E53948; font-size: 16px;">27th January, 06:15 PM - 07:00 PM</h1>
+            <!-- <div class="text-center">
+              <br> -->
+              <!-- <div class="home-buttons" style="display: flex;
+              align-items: flex-start;
+              padding: 0px;
+              gap: 48px;
+              justify-content: center;
+              margin: auto;
+              ">
+              <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button>
+              <button onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+              </div> -->
+            <!-- </div> -->
+          </div>
+        </div>
+    </div>
+    <div class="card col-lg-5 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 32px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+      <div class="image">
+        <img style="border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 16px;" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class  = "w-100" />
+      
+        <div class="content" style="font-family: myFont;">
+         <br>
+          <div class="header" style="color: #3EB6E6; font-size: 24px;">Quintuples</div>
+          <div class="description" style="font-size: 13px;">
+            In this game, there will be 3 boxes in which there will be many small folded papers. Total 20 chits in 1 box. Half of the paper will be filled with metallurgy words, and another half will be filled with miscellaneous words. Teams of 2 will be allowed. The first participant will have to draw 5 chits. 
+            <br>The teams whose participants drew chits with more than 3 metallurgy-related words will be considered further. The 2nd participant will be given a sheet with riddles, that correspond to the 10 metallurgy words in the chits. They'll have to find the answers to those riddles. The metallurgy-related words in the chits are the answers, so if they find 5 metallurgy-related words, they have an advantage. The participant with the highest score, i.e., the highest correctly answered riddle, is the winner. Ties will be resolved based on the maximum number of metallurgy chits they drew.
+
+          </div>
+          <br>
+          <!-- <h1 class="header" style="color:#E53948; font-size: 16px;"><span class="bi bi-trophy-fill"></span> INR 3000</h1> -->
+          <h1 class="header" style="color:#E53948; font-size: 16px;">28th January, 06:45 PM - 07:30 PM</h1>
+          <!-- <div class="text-center"> -->
+            <!-- <br> -->
+            <!-- <div class="home-buttons" style="display: flex;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 48px;
+            justify-content: center;
+            margin: auto;
+            ">
+            <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Register</button>
+            <button onclick="openPopup()" class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Details</button>
+            </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+  </div>
+</div>
+
+</div>
+
+
+   
+
+<!--details-->
+
+<!--prefest-->
+
+<div id="myModal" class="mdl">
+
+  <!-- Modal content -->
+  <div class="mdl-content">
+    <span class="closer">&times;</span>
+    <h3 style="text-align:center">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vTDhjWWPjV0wU1swrUy92Y9SJfSB2asi1jTv7MPa47C4zjDMBcJNx0evg2OKWhpng/pub?embedded=true"></iframe>
+    </h3>
+  </div>
+
+</div>
+<!--what if-->
+<div id="myModal1" class="mdl">
+
+  <!-- Modal content -->
+  <div class="mdl-content">
+    <span class="closer">&times;</span>
+    <h3 style="text-align:center">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vRBCuqXuJ__Yz2SfJsIoDWHp5YB2ONDG-kOpYHfrjgBQdkoJQC31FvAkammsU7hamEFaYiwXn8R68VK/pub?embedded=true"></iframe>
+  </h3>
+  </div>
+
+</div>
+
+<!--metal mania-->
+<div id="myModal2" class="mdl">
+
+  <!-- Modal content -->
+  <div class="mdl-content">
+    <span class="closer">&times;</span>
+    <h3 style="text-align:center">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vShiX0OMxijH-q5vRFPgvzZH4TkftVT6ZtZBxNCbT63to0YWRWhWBTwOIh-brh_tjQfV4rqCiCG1BLx/pub?embedded=true"></iframe>
+    </h3>
+  </div>
+
+</div>
+<!--ace the case-->
+<div id="myModal3" class="mdl">
+
+  <!-- Modal content -->
+  <div class="mdl-content">
+    <span class="closer">&times;</span>
+    <h3 style="text-align:center">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vS6gc3rTFDbUfnAvcJqqW9NcUJgdJQVuOjofSYR24aZstf5GuKVfGOHFg_rY-PRAXSShIfTtu6zdLvA/pub?embedded=true"></iframe>
+  </h3>
+  </div>
+
+</div>
+<!--combinatorials-->
+<div id="myModal4" class="mdl">
+
+  <!-- Modal content -->
+  <div class="mdl-content">
+    <span class="closer">&times;</span>
+    <h3 style="text-align:center">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vTUJ_MRgCunmn4t15I-all3qIy-K8lXV5sOmYFAkk6xt1oMKiGr_21nt_1GSJM-PDwJC6qYt27udJlC/pub?embedded=true"></iframe>
+  </h3>
+  </div>
+
+</div>
+
+      <footer class="mainfooter" role="contentinfo">
+        <div class="container">
+          <br/>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <ul
+                class="social-network social-circle"
+                style="
+                  display: flex !important;
+                  justify-content: center !important;
+                "
+              >
+                <li>
+                  <a
+                    href="https://www.facebook.com/nitt.mettle/"
+                    target="_blank"
+                    class="icoFacebook"
+                    title="Facebook"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/mettle-nit-trichy/?originalSubdomain=in"
+                    target="_blank"
+                    class="icoLinkedin"
+                    title="Linkedin"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/mettle_nitt/?hl=en"
+                    target="_blank"
+                    class="icoFacebook"
+                    title="Instagram"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://mobile.twitter.com/mettlenitt"
+                    target="_blank"
+                    class="icoLinkedin"
+                    title="Twitter"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  </li>
+                  <li>
+                  <a
+                    href="https://www.youtube.com/c/MettleNITTrichy"
+                    target="_blank"
+                    class="icoYoutube"
+                    title="youtube"
+                    ><i class="fa fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://medium.com/mettle-nit-trichy"
+                    target="_blank"
+                    class="icoMedium"
+                    title="fa-medium"
+                    ><i class="fa fa-medium"></i
+                  ></a>
+                </li>
+              </ul>
+              <hr align="center" style="border-color: white; width: 320px" />
+              <p style="color: white; font-size: 15px; text-align: center">
+                Made with
+                <span style="color: #E53948; display: inline-flex; font-size: 1.8em"
+                  >&hearts;</span
+                >
+                by Mettle'23
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+       
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modal1 = document.getElementById("myModal1");
+        var modal2 = document.getElementById("myModal2");
+        var modal3 = document.getElementById("myModal3");
+        var modal4 = document.getElementById("myModal4");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        var btn1 = document.getElementById("myBtn1");
+        var btn2 = document.getElementById("myBtn2");
+        var btn3 = document.getElementById("myBtn3");
+        var btn4 = document.getElementById("myBtn4");
+
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closer")[0];
+        var span1 = document.getElementsByClassName("closer")[1];
+        var span2 = document.getElementsByClassName("closer")[2];
+        var span3 = document.getElementsByClassName("closer")[3];
+        var span4 = document.getElementsByClassName("closer")[4];
+
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn1.onclick = function() {
+          modal1.style.display = "block";
+        }
+        btn2.onclick = function() {
+          modal2.style.display = "block";
+        }
+        btn3.onclick = function() {
+          modal3.style.display = "block";
+        }
+        btn4.onclick = function() {
+          modal4.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        span1.onclick = function() {
+          modal1.style.display = "none";
+        }
+        span2.onclick = function() {
+          modal2.style.display = "none";
+        }
+        span3.onclick = function() {
+          modal3.style.display = "none";
+        }
+        span4.onclick = function() {
+          modal4.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+        }
+          if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+        if (event.target == modal3) {
+            modal3.style.display = "none";
+        }
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+        }
+        
+        </script>
+                  <script type="text/javascript">
+                    var nav = document.querySelector("nav");
+                    let button = document.querySelector('#navbutton');
+                      button.addEventListener("click",()=>{
+                        nav.classList.add("nav-bg", "shadow");
+                        });
+                    window.addEventListener("scroll", function () {
+                      if (window.pageYOffset > 100) {
+                        nav.classList.add("nav-bg", "shadow");
+                      } else {
+                        nav.classList.remove("nav-bg", "shadow");
+                      }
+                    });
+                  </script>
+                  <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                    crossorigin="anonymous"
+                  ></script>
+                  <link
+                    rel="stylesheet"
+                    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                  />
+              
+                  <link
+                    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                    rel="stylesheet"
+                  />
+              
+                  <script
+                    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                    crossorigin="anonymous"
+                  ></script>
+                  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                  <script>
+                    AOS.init({
+                      duration: 1000,
+                    });
+                  </script>
+                </body>
+              </html>
+
+             
+

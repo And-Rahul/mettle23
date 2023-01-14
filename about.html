@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mettle'23</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" href="mettlelogo.png" type="image/x-icon">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+	
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+		<link href="//db.onlinewebfonts.com/c/d002e7c91b889cc10ce21789cfde95dd?family=Sequel100Wide-95" rel="stylesheet" type="text/css"/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="https.//unpkg.com/aos@next/dist/aos.css" />
+		<style>
+			.banner-image {
+				background-size: cover;
+			}
+			[data-aos="new-animation"] {
+				opacity: 10;
+				transition-property: transform, opacity;
+			}
+			[data-aos="new-animation"].aos-animate {
+				opacity: 1;
+			}
+			.sponsors{
+				margin:auto;
+				display: flex;
+				justify-content: space-around;
+			}
+			@media  screen and (max-width:768px)
+			{
+				.sponsors{
+				margin:auto;
+				display: grid;
+
+			}}
+            @media (max-width:768px)
+			{
+                video{
+                    width: 80vw!important;
+                }
+			}
+
+			@media screen and (min-width: 768px) {
+				[data-aos="new-animation"] {
+					transform: scale(1.3);
+					transition: 3s;
+				}
+				[data-aos="new-animation"].aos-animate {
+					transform: translateX(0);
+				}
+				
+			}
+      .nav-item .active {
+    color: #776843;
+    border: 1px solid #776843;
+  }
+		</style>
+		<script type="text/javascript" src="loader.js"></script>
+	</head>
+	<body>
+		<div id="loader"></div>
+		<!-- Navbar  -->
+		<div id="content">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1">
+			<div class="container" style="font-family: myNavFont;">
+				<a href="index.html" ><img src="mettlelogo.png" alt="" width="80px" height="80px"></a>
+
+				<button
+					id="navbutton"
+					class="navbar-toggler collapsed"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="toggler-icon top-bar"></span>
+					<span class="toggler-icon middle-bar"></span>
+					<span class="toggler-icon bottom-bar"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="mx-auto"></div>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white"  href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: #E53948;"  href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="workshops.html">Workshops</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="schedule.html">Schedule</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="team.html">Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Banner Image  -->
+		<br>
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        <div class="content text-center">
+				<h1 style="color: #E53948; font-family: myFirstFont; font-size: 8vw; width: 70vw; margin: auto;">ABOUT</h1>
+                <br>
+				<p style="width: 65vw; font-family: myFont; margin: auto; color: #E59AAA;">Welcome to Mettle, the Annual National Level Technical Symposium of the Department of Metallurgical and Materials Engineering at NIT Trichy. We bring together students and professionals in the field of metallurgical and materials engineering to learn, connect, and advance their knowledge and skills through Workshops, Guest Lectures and much more.</p>
+            </div>
+        <br>
+        <div class="text-center" style=" width:100vw;">
+            <video style="width:50vw; border: 2px solid #E53948; border-radius: 10px;" autoplay controls>
+            <source src="mettle reveal.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <br>
+        <br>
+            <div class="content text-center">
+                <h1 style="color: #E53948; font-family: myFirstFont; font-size: 4vw; width: 70vw; margin: auto;">METTLE ‘23 - FRACTALS</h1>
+                <br>
+				<p style="width: 65vw; font-family: myFont; margin: auto; ">Join us at NIT Trichy from <span style="color: #E53948;">January 27th to January 29th </span> for Mettle 2023. This year, we are excited to explore  <span style="color: #E53948;">Fractals</span> by deconstructing complexities in Metallurgy!
+See you there! 👋</p>
+            </div>
+		</div>
+	
+
+		<br>
+        <br>
+		<section id="contact">
+				<h1 class="contact_heading" style="font-family: myHeadingFont;">The Team</h1>
+				<div class="contact_content">
+						<div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="con_mem">
+                                        <div class="mem_img">
+                                                <img style="background: linear-gradient(173.81deg, rgba(153, 211, 107, 0.5) 7.81%, rgba(83, 154, 220, 0.5) 36.4%, rgba(207, 135, 243, 0.5) 63.18%, rgba(229, 85, 97, 0.5) 94.95%); background-color: #EBC7C9;"  src="nanda.png" alt="">
+                                        </div>
+                                        <div class="text-center">
+                                            <h2 style="color: #E53948; font-family: myFirstFont; padding-top: 15px;" class="team-10-h2">NANDHA DEVAN</h2>
+                                            <p style="font-family: myFont;">Overall Coordinator</p>
+                                        </div>
+                                </div>
+                        </div>
+							 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" >
+									 <div class="con_mem" >
+											 <div class="mem_img">
+													 <img style="background: linear-gradient(173.81deg, rgba(153, 211, 107, 0.5) 7.81%, rgba(83, 154, 220, 0.5) 36.4%, rgba(207, 135, 243, 0.5) 63.18%, rgba(229, 85, 97, 0.5) 94.95%); background-color: #EBC7C9;"  src="haeshini.png" alt="">
+											 </div>
+											 <div class="text-center">
+												<h2 style="color: #E53948; font-family: myFirstFont; padding-top: 15px;" class="team-10-h2">HAESHINI</h2>
+                                                <p style="font-family: myFont;">Chair Person</p>
+											 </div>
+									 </div>
+							 </div>
+							 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									 <div class="con_mem">
+											 <div class="mem_img">
+													 <img style="background: linear-gradient(173.81deg, rgba(153, 211, 107, 0.5) 7.81%, rgba(83, 154, 220, 0.5) 36.4%, rgba(207, 135, 243, 0.5) 63.18%, rgba(229, 85, 97, 0.5) 94.95%); background-color: #EBC7C9;" src="janakiram.png" alt="">
+											 </div>
+											 <div class="text-center">
+                                                <h2 style="color: #E53948; font-family: myFirstFont; padding-top: 15px;" class="team-10-h2">JANAKI<br> RAMAN</h2>
+                                                <p style="font-family: myFont;">Treasurer</p>
+											 </div>
+									 </div>
+							 </div>
+							
+						</div>
+				</div>
+	 </section>
+
+	<!--popup-ad-->
+
+	<!-- <div style=" background-color: #ffffff;
+    width: 420px;
+    padding: 5px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    display: none; 
+    text-align: center;" class="pop">
+        <button style="display: block;
+		margin:  0 0 20px auto;
+		background-color: transparent;
+		font-size: 5px;
+		color: #ffffff;
+			background: #03549a;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+		border: none;
+		outline: none;
+		cursor: pointer;" id="close">&times;</button>
+        <h2 style="margin-top: -20px;">Automatic Pop-Up</h2>
+        <p style="font-size: 14px;
+		text-align: justify;
+		margin: 20px 0;
+		line-height: 25px;">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita distinctio fugiat alias iure qui, commodi minima magni ullam aliquam dignissimos?
+        </p>
+        <a style="display: block;
+		width: 150px;
+		position: relative;
+		margin: 5px auto;
+		text-align: center;
+		background-color: #0f72e5;
+		border-radius: 20px;
+		color: #ffffff;
+		text-decoration: none;
+		padding: 8px 0;" href="#">Let's Go</a>
+    </div>
+    Script
+    <script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script> -->
+	<!-- <div class="popup-overlay">
+		<div class="popup-container">
+			<div class="left">
+				<img class="bg-2" src="images/bg-2.png" alt="" />
+				<img class="bg-1" src="images/bg-1.png" alt="" />
+				<img class="hero-image" src="images/hero-image.png" alt="" />
+				<img
+					class="hero-image-small"
+					src="images/hero-image-small.png"
+					alt=""
+				/>
+			</div>
+
+			<div class="right">
+				<div class="skip-button">Skip in 3s</div>
+
+				<p class="logo">Our Partner</p>
+				<h2 class="popup-heading">CSK Food Truck</h2>
+				<p class="description">
+					CSK is a fastest growing food truck franchise operating in south India with more than 40 plus Happy Franchise Owners.
+				</p>
+
+				<a href="https://cskrestaurant.com/" class="visit-button">Visit Site</a>
+			</div>
+		</div>
+	</div> -->
+
+	<script src="popup.js"></script>
+	
+	<!--footer-->
+<footer class="mainfooter" role="contentinfo">
+			<div class="container">
+        <br/>
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<ul
+							class="social-network social-circle"
+							style="
+								display: flex !important;
+								justify-content: center !important;
+							"
+						>
+							<li>
+								<a
+									href="https://www.facebook.com/nitt.mettle/"
+									target="_blank"
+									class="icoFacebook"
+									title="Facebook"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/company/mettle-nit-trichy/?originalSubdomain=in"
+									target="_blank"
+									class="icoLinkedin"
+									title="Linkedin"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.instagram.com/mettle_nitt/?hl=en"
+									target="_blank"
+									class="icoFacebook"
+									title="Instagram"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://mobile.twitter.com/mettlenitt"
+									target="_blank"
+									class="icoLinkedin"
+									title="Twitter"
+									><i class="fa fa-twitter"></i
+								></a>
+								</li>
+								<li>
+								<a
+									href="https://www.youtube.com/c/MettleNITTrichy"
+									target="_blank"
+									class="icoYoutube"
+									title="youtube"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://medium.com/mettle-nit-trichy"
+									target="_blank"
+									class="icoMedium"
+									title="fa-medium"
+									><i class="fa fa-medium"></i
+								></a>
+							</li>
+						</ul>
+						<hr align="center" style="border-color: white; width: 320px" />
+            <p style="color: white; font-size: 15px; text-align: center">
+							Made with
+							<span style="color: #E53948; display: inline-flex; font-size: 1.8em"
+								>&hearts;</span
+							>
+							by Mettle'23
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					dynamicBullets: true,
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					570: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+					860: {
+						slidesPerView: 3,
+						spaceBetween: 15,
+					},
+					900: {
+						slidesPerView: 3,
+						spaceBetween: 25,
+					},
+				},
+			});
+		</script>
+		<script type="text/javascript">
+			var nav = document.querySelector("nav");
+			let button = document.querySelector('#navbutton');
+			button.addEventListener("click",()=>{
+				nav.classList.add("nav-bg", "shadow");
+				});
+			window.addEventListener("scroll", function () {
+				if (window.pageYOffset > 100) {
+					nav.classList.add("nav-bg", "shadow");
+				} else {
+					nav.classList.remove("nav-bg", "shadow");
+				}
+			});
+		</script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		/>
+        <script src="bower_components/aos/dist/aos.js"></script>
+        
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+			});
+		</script>
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Jan 27, 2023 00:00:00").getTime();
+			
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+			
+			  // Get today's date and time
+			  var now = new Date().getTime();
+				
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+				
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				
+			  // Output the result in an element with id="demo"
+			//   document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+			//   + minutes + " : " + seconds ;
+			  document.getElementById("d1").innerHTML= Math.floor(days/10);
+			  document.getElementById("d2").innerHTML= days%10;
+			  document.getElementById("h1").innerHTML= Math.floor(hours/10);
+			  document.getElementById("h2").innerHTML= hours%10;
+			  document.getElementById("m1").innerHTML= Math.floor(minutes/10);
+			  document.getElementById("m2").innerHTML= minutes%10;
+			  document.getElementById("s1").innerHTML= Math.floor(seconds/10);
+			  document.getElementById("s2").innerHTML= seconds%10;
+			
+			  // If the count down is over, write some text 
+			  if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "EXPIRED";
+			  }
+			}, 1000);
+			</script>
+	</body>
+</html>
