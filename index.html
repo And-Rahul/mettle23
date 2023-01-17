@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <style>
+        button1:hover{
+          background-color: #555555;
+         color: white;
+         }
+        </style>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mettle'23</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" href="mettlelogo.png" type="image/x-icon">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+	
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+		<link href="//db.onlinewebfonts.com/c/d002e7c91b889cc10ce21789cfde95dd?family=Sequel100Wide-95" rel="stylesheet" type="text/css"/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="https.//unpkg.com/aos@next/dist/aos.css" />
+		<style>
+			.banner-image {
+				background-size: cover;
+			}
+			[data-aos="new-animation"] {
+				opacity: 10;
+				transition-property: transform, opacity;
+			}
+			[data-aos="new-animation"].aos-animate {
+				opacity: 1;
+			}
+			.sponsors{
+				margin:auto;
+				display: flex;
+				justify-content: space-around;
+			}
+			@media  screen and (max-width:768px)
+			{
+				.sponsors{
+				margin:auto;
+				display: grid;
+			}
+
+			}
+
+			@media screen and (min-width: 768px) {
+				[data-aos="new-animation"] {
+					transform: scale(1.3);
+					transition: 3s;
+				}
+				[data-aos="new-animation"].aos-animate {
+					transform: translateX(0);
+				}
+				
+			}
+      .nav-item .active {
+    color: #776843;
+    border: 1px solid #776843;
+  }
+		</style>
+		<script type="text/javascript" src="loader.js"></script>
+	</head>
+	<body>
+		<div id="loader"></div>
+		<!-- Navbar  -->
+		<div id="content">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1">
+			<div class="container" style="font-family: myNavFont;">
+				<a  href="index.html" ><img src="mettlelogo.png" alt="" width="80px" height="80px"></a>
+
+				<button
+					id="navbutton"
+					class="navbar-toggler collapsed"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="toggler-icon top-bar"></span>
+					<span class="toggler-icon middle-bar"></span>
+					<span class="toggler-icon bottom-bar"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="mx-auto"></div>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white"  href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white"  href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="workshops.html">Workshops</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="schedule.html">Schedule</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="team.html">Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Banner Image  -->
+		<div
+			class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+		>
+			<div class="content text-center">
+				<p style="font-family: myFont; margin: auto;">Welcome to<br></p>
+				<h1 style="color: #E53948; font-family: myFirstFont; font-size: 8vw; width: 70vw; margin: auto;">METTLE '23</h1>
+				<p style="width: 65vw; font-family: myFont; margin: auto;">The Annual Technical Symposium of Department of Metallurgical and Materials Engineering, National Institute of Technology Tiruchirappalli</p>
+				<br>
+				<br>
+
+				<div class="index-home-buttons" style="display: flex;
+				align-items: center;
+				padding: 0px;
+				gap: 48px;
+				justify-content: center;
+				margin: auto;
+				">
+				<form action="https://forms.gle/UJfMsq2PHMMsgwms7" method="get" target="_blank">
+				<button style="padding: 14px 29px;
+				width: 284px;
+				background: #E53948;
+				border: 2px solid transparent;
+				color: white;
+				font-family: myNavFont;
+				font-size: 15px;
+				">Register for Mettle '23</button>
+				</form>
+
+				<button onClick="window.location.href='events.html';" style="
+				padding: 14px 36px;
+				width: 284px;
+				border: 2px solid #E55561;
+				background-color: transparent;
+				color: #E55561;
+				font-family: myNavFont;
+				font-size: 15px;
+				">Checkout our Events</button>
+			
+				</div>
+			</div>
+			<div class="scroll-downs">
+				<div class="mousey">
+					<div class="scroller"></div>
+				</div>
+			</div>
+		</div>
+	</br>
+		<a name="about"></a>
+		<br/>
+		<h1 style="text-align: center; font-family: myHeadingFont;">Brands we've worked with</h1>
+		<br/>
+				<br/>
+
+				<div class="sponsors">
+					<div class="sponsor1">
+						<img data-aos="fade-left" style="border: 3px solid #E53948; border-radius: 15px;" src="csk3.jpg" width="200", height="150">
+					</div>
+					<br/>
+					<br/>
+					<div class="sponsor1">
+						<img data-aos="fade" style="border: 3px solid #E53948; border-radius: 15px;" src="Metagate.png" width="200", height="150">
+					</div>
+					<br>
+					<br>
+					<div class="sponsor1">
+						<img data-aos="fade-right" style="border: 3px solid #E53948; border-radius: 15px;" src="Nk.jpeg" width="200", height="150">
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class="sponsors">
+					<div class="sponsor1">
+						<img data-aos="fade-left" style="border: 3px solid #E53948; border-radius: 15px;" src="dosaexpress.jpg" width="200", height="150">
+					</div>
+					
+					
+					<div class="sponsor1">
+						<img data-aos="fade-right" style="border: 3px solid #E53948; border-radius: 15px;" src="ickreate.png" width="200", height="150">
+					</div>
+				</div>
+				<br/>
+				<br/>
+				
+				<br/>
+				<br/>
+				<br/>
+				<h1 style="text-align: center; font-family: myHeadingFont; color: #E53948;">Discover the wonders of <span style="color: white;">Fractals</span> in</h1>
+				
+				<!--timer-->
+				<div style="display: flex; font-family: myHeadingFont; padding-top: 5vw;" class="timer text-center">
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;" ><p style="font-size :10vw;" id="d1"></p></div> 
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="d2"></p></div>
+					</div>
+					<p style="font-size :10vw; color: #E53948;">:</p>
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="h1"></p></div> 
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="h2"></p></div>
+					</div>
+					<p style="font-size :10vw; color: #E53948;">:</p>
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="m1"></p></div> 
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="m2"></p></div>
+					</div>
+					<p style="font-size :10vw; color: #E53948;">:</p>
+					<div style="display: flex; gap: 5px; flex-direction: row;">
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="s1"></p></div>
+						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;"><p style="font-size :10vw;" id="s2"></p></div>
+					</div>
+				</div>
+					<div style="display: flex; padding-left: 5vw;" class="text-center"> 
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Days</p>
+						</div>
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Hours</p>
+						</div>
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Minutes</p>
+						</div>
+						<div class="text-center" style="flex-direction: row; width: 23vw;">
+							<p style="font-size :2vw;">Seconds</p>
+						</div>
+						
+					</div>
+				<br/>
+				<!--timer-->
+				<div class="text-center">
+				<form action="https://forms.gle/UJfMsq2PHMMsgwms7" method="get" target="_blank">
+				<button style="padding: 14px 29px;
+				width: 284px;
+				background: #E53948;
+				border: 2px solid transparent;
+				color: white;
+				font-family: myNavFont;
+				font-size: 15px;
+				">Register for Mettle '23</button>
+				</form>
+				</div>
+
+				<br/>
+				<br/>
+				
+		<br>
+		<br>
+		<h1 class="text-center" style=" font-family: myHeadingFont;" >Get more bang for your bucks!</h1>
+		
+		
+	<div class = "container">
+			<div class = "row pb-5 d-flex flex-row justify-content-center">
+				<div class="text-center card col-lg-9 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(241, 176, 252, 0.6); border-radius: 16px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+					<!--<h1 class="text-center" style=" font-family: myHeadingFont; color: #E53948; font-size:x-large;" >Combo offers</h1>-->
+					<div class="image">
+						<div style="display: flex; gap:20px;">
+					  <div style="font-family: myFont; flex-direction: row;">
+						<img style="width: 90%; border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 8px;" src="combo.jpg">
+						<h2 style="color: #3EB6E6; font-size: 24px; padding-top: 20px;">3D Printing by CAMA + Non Destructive Testing + Material Informatics <b>(With Hackathon)</b></h2>
+						<p style="font-size: 20px;"><s style="color: #E59AA0; font-size: 16px;">INR 675</s> INR 600</p>
+					</div> 
+					  <!--<h1 style="font-family: myFont; color: #E53948; font-family: myFont; padding-top: 100px;">+</h1>-->
+					  <div style="font-family: myFont; flex-direction: row;">
+						<img style="width: 90%; border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 8px;" src="all combo.png" />
+						<h2 style="color: #3EB6E6; font-size: 24px; padding-top: 20px;">3D Printing by CAMA + Non Destructive Testing + Material Informatics <b>(Without Hackathon)</b></h2>
+						<p style="font-size: 20px;"><s style="color: #E59AA0; font-size: 16px;">INR 575</s> INR 520</p>
+					</div>
+					</div>
+					  <div class="content" style="font-family: myFont;">
+					   <br>
+						<!--<div class="description text-center" style="font-size: 24px; color: #E59AA0;">
+							Buy two workshop tickets and save 10% of the total value
+						</div>-->
+						<br>
+						<!-- <div class="text-center" >
+							<img src="10-percent.png" style="width: 5%;">
+						</div> -->
+						
+						<!--<div class="text-center" style="margin: auto; border-radius: 10px; border: .5px solid #E53948; margin-bottom: 20px; background-color: rgba(229, 57, 72, 0.1); width:max-content; padding:10px;">
+							<img src="star.png" width="30px" height="50px" style="display: block; position: absolute; margin-left: -30px; margin-top: -20px;"/>
+							<img src="star.png" width="15px" height="25px" style="display: block; position: absolute; margin-left: -30px; margin-top: -30px;"/>
+							<img src="star.png" width="15px" height="25px" style="display: block; position: absolute; margin-left: -10px; margin-top: -25px;"/>
+
+							<!--<p style="margin-bottom: 0%; color:#ffffff; font-size: 24px; width:max-content;"> INR 350</p>-->
+							
+						</div>
+						<div class="text-center">
+						  <div style="display: flex;
+						  align-items: flex-start;
+						  padding: 0px;
+						  gap: 48px;
+						  justify-content: center;
+						  margin: auto;
+						  ">
+						  <form action="https://forms.gle/4FBBXZkKCRV884pF8" method="get" target="_blank">
+						  <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Buy Now</button></form>
+						  <button onClick="window.location.href='workshops.html';"  class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Browse all</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		  </div>
+<div class = "container">
+			<div class = "row pb-5 d-flex flex-row justify-content-center">
+				<div class="text-center card col-lg-9 p-4 m-4 mt-5 mb-4" style="border: 1.5px solid rgba(241, 176, 252, 0.6); border-radius: 16px; background: linear-gradient(137.74deg, rgba(255, 255, 255, 0.075) 0%, rgba(242, 242, 242, 0.0225) 101.31%);">
+					<!--<h1 class="text-center" style=" font-family: myHeadingFont; color: #E53948; font-size:x-large;" >Combo offers</h1>-->
+					<div class="image">
+						<div style="display: flex; gap:20px;">
+					  <div style="font-family: myFont; flex-direction: row;">
+						<img style="width: 90%; border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 8px;" src="combo2.jpg" />
+						<h2 style="color: #3EB6E6; font-size: 24px; padding-top: 20px;">3D Printing by CAMA + Material Informatics <b>(With Hackathon)</b></h2>
+						<p style="font-size: 20px;"><s style="color: #E59AA0; font-size: 16px;">INR 475</s> INR 450</p>
+					</div> 
+					  <!--<h1 style="font-family: myFont; color: #E53948; font-family: myFont; padding-top: 100px;">+</h1>-->
+					  <div style="font-family: myFont; flex-direction: row;">
+						<img style="width: 90%; border: 1.5px solid rgba(230, 163, 143, 0.6); border-radius: 8px;" src="3d+mi.png" />
+						<h2 style="color: #3EB6E6; font-size: 24px; padding-top: 20px;">3D Printing by CAMA + Material Informatics <b>(Without Hackathon)</b></h2>
+						<p style="font-size: 20px;"><s style="color: #E59AA0; font-size: 16px;">INR 375</s> INR 350</p>
+					</div>
+					</div>
+					  <div class="content" style="font-family: myFont;">
+					   <br>
+						<!--<div class="description text-center" style="font-size: 24px; color: #E59AA0;">
+							Buy two workshop tickets and save 10% of the total value
+						</div>-->
+						<br>
+						<!-- <div class="text-center" >
+							<img src="10-percent.png" style="width: 5%;">
+						</div> -->
+						
+						<!--<div class="text-center" style="margin: auto; border-radius: 10px; border: .5px solid #E53948; margin-bottom: 20px; background-color: rgba(229, 57, 72, 0.1); width:max-content; padding:10px;">
+							<img src="star.png" width="30px" height="50px" style="display: block; position: absolute; margin-left: -30px; margin-top: -20px;"/>
+							<img src="star.png" width="15px" height="25px" style="display: block; position: absolute; margin-left: -30px; margin-top: -30px;"/>
+							<img src="star.png" width="15px" height="25px" style="display: block; position: absolute; margin-left: -10px; margin-top: -25px;"/>
+
+							<!--<p style="margin-bottom: 0%; color:#ffffff; font-size: 24px; width:max-content;"> INR 350</p>-->
+							
+						</div>
+						<div class="text-center">
+						  <div style="display: flex;
+						  align-items: flex-start;
+						  padding: 0px;
+						  gap: 48px;
+						  justify-content: center;
+						  margin: auto;
+						  ">
+						  <form action="https://forms.gle/4FBBXZkKCRV884pF8" method="get" target="_blank">
+						  <button class = "mb-2 align-content" style="border-width:0px; background: #E53948; color:white; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Buy Now</button></form>
+						  <button onClick="window.location.href='workshops.html';"  class = "mb-2 align-content" style="border:1px solid #E53948; background: transparent; color:#E53948; padding: 10px; font-family: myNavFont; font-size: 15px; width: 150px;">Browse all</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		  </div>
+
+
+		<section id="workshop_events" class="text-center">
+			<h1 style="font-family: myHeadingFont;" id="weheading">Past Workshops and Events</h1>
+		</br></br>
+			<div class="wecontent">
+				<div class="swiper mySwiper">
+						 <div class="swiper-wrapper">
+							 <div class="card we_card swiper-slide border-0" style="width: 18rem;">
+										<img class="weimage" src="https://mettle.nitt.edu/MettleWorkshops-main/assets/img/3d_norm.png" class="card-img-top" alt="...">
+										<div class="we_cardbody card-body">
+												 <h6 class="card-text we_hs">FUTURE OF TECHNOLOGY - 3D PRINTING</h6>
+												 <p class="we_p">Date: 28th Jan 2022</p>
+										</div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<img src="jsw_norm.png" class="card-img-top" alt="...">
+									<div class="we_cardbody card-body">
+										 <h6 class="card-text we_hs">FAILURE ANALYSIS</h6>
+										 <p class="we_p">Date: 29th Jan 2022</p>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<img src="cor_norm.png" class="card-img-top" alt="...">
+									<div class="we_cardbody card-body">
+										 <h6 class="card-text we_hs">CORROSION WORKSHOP</h6>
+										 <p class="we_p">Date: 30th Jan 2022</p>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<img src="iim_norm.png" class="card-img-top" alt="...">
+									<div class="we_cardbody card-body">
+										 <h6 class="card-text we_hs">IIM QUIZ</h6>
+										 <p class="we_p">Date: 28th January 2022</p>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<img src="pict_norm.png" class="card-img-top" alt="...">
+									<div class="we_cardbody card-body">
+										 <h6 class="card-text we_hs">PICTIONARY ON METALLURGY WORDS</h6>
+										 <p class="we_p">Date: 29th January 2022</p>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<img src="ev_norm.png" class="card-img-top" alt="...">
+									<div class="we_cardbody card-body wecardbody">
+										 <h6 class="card-text we_hs">ELECTRIC VEHICLE DESIGN</h6>
+										 <p class="we_p">Date: 29th and 30th Jan 2022</p>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<img src="balls_norm.png" class="card-img-top" alt="...">
+									<div class="we_cardbody card-body">
+										 <h6 class="card-text we_hs">QUIZ IN ASSOCIATION WITH BALLS BY PICASSO</h6>
+										 <p class="we_p">Date: 29th and 30th Jan 2022</p>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									 <a href="https://www.youtube.com/watch?v=_1TvJBoMy9w"><img src="ev_norm.png" class="card-img-top  ytcard" alt="..."></a>
+									 <div class="we_cardbody card-body">
+										 <h6 class="we_hs">PROF RAMAMOORTHY RAMESH</h6>
+									 </div>
+							 </div>
+							 <div class="card we_card swiper-slide border-0" style="width: 15rem;">
+									<a href="https://www.youtube.com/watch?v=tR-keJwRrRg"><img src="iim_norm.png" class="card-img-top  ytcard" alt="..."></a>
+									 <div class="we_cardbody card-body">
+										 <h6 class="we_hs">DR WEI XIONG</h6>
+									 </div>
+							 </div>
+						 </div>
+						 <div class="button-icons swiper-button-next"></div>
+						 <div class="button-icons swiper-button-prev"></div>
+						 <div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			loop: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			breakpoints: {
+				400: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				800: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+		});
+	</script>
+		</section>
+		<br />
+		<br />
+		<br />
+		<br />
+
+	 <div class="container">
+	 <div data-mc-src="db3c198d-ef6f-48b8-a423-06952e56bc51#instagram"></div>
+        </div>
+<script 
+  src="https://cdn2.woxo.tech/a.js#63bfddba3da16ff6a22b193d" 
+  async data-usrc>
+</script>
+
+	<!-- <div class="container">
+		<header class="major">
+		<h2>Follow us on Instagram</h2>
+		</header>
+		<div class="embedsocial-hashtag" data-ref="f61dae9175a3a0a7ff8f9f3b7f5d8926cc82fcdf">
+			<a class="feed-powered-by-es" href="https://embedsocial.com/products/embedfeed/" target="_blank" title="Powered by EmbedSocial" style="display: block;"></a>
+		<iframe src="https://embedsocial.com/api/pro_hashtag/f61dae9175a3a0a7ff8f9f3b7f5d8926cc82fcdf/" id="embedIFrame_f61dae9175a3a0a7ff8f9f3b7f5d8926cc82fcdf" class="embedsocial-hashtag-iframe" title="EmbedFeed widget" scrolling="no" style="width: 100%; height: 1477px; border: 0px; overflow: hidden;"></iframe>
+		</div>
+		<script>
+			(function (d, s, id) {
+				var js;
+				if (d.getElementById(id)) {
+					return;
+				}
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "https://embedsocial.com/cdn/ht.js";
+				d.getElementsByTagName("head")[0].appendChild(js);
+			}(document, "script", "EmbedSocialHashtagScript"));
+		</script>
+		
+	</div> -->
+	<!--popup-ad-->
+
+	<!-- <div style=" background-color: #ffffff;
+    width: 420px;
+    padding: 5px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    display: none; 
+    text-align: center;" class="pop">
+        <button style="display: block;
+		margin:  0 0 20px auto;
+		background-color: transparent;
+		font-size: 5px;
+		color: #ffffff;
+			background: #03549a;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+		border: none;
+		outline: none;
+		cursor: pointer;" id="close">&times;</button>
+        <h2 style="margin-top: -20px;">Automatic Pop-Up</h2>
+        <p style="font-size: 14px;
+		text-align: justify;
+		margin: 20px 0;
+		line-height: 25px;">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita distinctio fugiat alias iure qui, commodi minima magni ullam aliquam dignissimos?
+        </p>
+        <a style="display: block;
+		width: 150px;
+		position: relative;
+		margin: 5px auto;
+		text-align: center;
+		background-color: #0f72e5;
+		border-radius: 20px;
+		color: #ffffff;
+		text-decoration: none;
+		padding: 8px 0;" href="#">Let's Go</a>
+    </div> -->
+    <!--Script-->
+    <script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script>
+	<!-- <div class="popup-overlay">
+		<div class="popup-container">
+			<div class="left">
+				<img class="bg-2" src="images/bg-2.png" alt="" />
+				<img class="bg-1" src="images/bg-1.png" alt="" />
+				<img class="hero-image" src="images/hero-image.png" alt="" />
+				<img
+					class="hero-image-small"
+					src="images/hero-image-small.png"
+					alt=""
+				/>
+			</div>
+
+			<div class="right">
+				<div class="skip-button">Skip in 3s</div>
+
+				<p class="logo">Our Partner</p>
+				<h2 class="popup-heading">CSK Food Truck</h2>
+				<p class="description">
+					CSK is a fastest growing food truck franchise operating in south India with more than 40 plus Happy Franchise Owners.
+				</p>
+
+				<a href="https://cskrestaurant.com/" class="visit-button">Visit Site</a>
+			</div>
+		</div>
+	</div> -->
+
+	<br>
+	<br>
+    <section id="faq">
+
+		<div style="font-family: myFont;" class="container" data-aos="fade-up">
+  
+		  <div class="section-header text-center">
+			<h1 style="font-family: myHeadingFont;" id="weheading">Miscellaneous</h1>
+		  </div>
+		  <br>
+		  <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+			<div class="col-lg-9">
+  
+			  <ul class="faq-list">
+  
+				<li>
+				  <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Mettle Campus Ambassador <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+				  <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+					<p>
+						"Become the faces of our Nation-wide symposium and get a lot of exclusive perks.”<br>
+						Be our mettle Ambassadors.<br>
+						•	No pre-requirements<br>
+						•	Opportunity to bring a great impact.<br>
+						•	Learn to lead.<br>
+						Exclusively for 2nd and 3rd Year students pursuing any engineering degree.<br>
+						Deadline for filling the interest form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWwpcasdUAW2M_DviDKlDywlSfRK0isPnW-z3wdGiOz2FprA/viewform" target="_blank">Click here</a><br>
+						"Don't miss this chance to get to know and work with likeminded and extra-ordinary minds"<br>
+						</p>
+				  </div>
+				</li>
+  
+				<li>
+				  <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">NITT Map <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+				  <div id="faq2" class="text-center collapse" data-bs-parent=".faq-list">
+					<img src="NittMap.png" width="300px"/>
+				  </div>
+				</li>
+  
+				<li>
+				  <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Mettle Tshirt <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+				  <div id="faq3" class="text-center collapse" data-bs-parent=".faq-list">
+					<p>Tshirt registration link:<a href="https://docs.google.com/forms/d/e/1FAIpQLScT3JyVtHjjkIcFI4J-VXNkWmxC-xNPyNLV_bp-Ox3udvHovg/viewform" target="_blank">Click here</a></p>  
+					<img src="MettleTshirt.png" width="300px"/>
+				  </div>
+				</li>
+  
+			  </ul>
+  
+			</div>
+		  </div>
+  
+		</div>
+  
+	  </section>
+
+
+	<!-- <div class="text-center" style="display: block;
+	position: fixed;
+	float: right;
+	background-color:#E53948;
+	height: 80px;
+	width: 80px;
+	z-index: 1000000;
+	bottom: 0;
+	right: 0;
+	border: 0;
+	border-radius: 20px;
+	margin: 0 30px 30px 0;
+	padding: 20px;
+	">
+		<p style="color: #ffffff;">FOR ADs</p>
+	</div> -->
+
+
+
+
+
+
+
+	<script src="popup.js"></script>
+	
+	<!--footer-->
+<footer class="mainfooter" role="contentinfo">
+			<div class="container">
+        <br/>
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<ul
+							class="social-network social-circle"
+							style="
+								display: flex !important;
+								justify-content: center !important;
+							"
+						>
+							<li>
+								<a
+									href="https://www.facebook.com/nitt.mettle/"
+									target="_blank"
+									class="icoFacebook"
+									title="Facebook"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/company/mettle-nit-trichy/?originalSubdomain=in"
+									target="_blank"
+									class="icoLinkedin"
+									title="Linkedin"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.instagram.com/mettle_nitt/?hl=en"
+									target="_blank"
+									class="icoFacebook"
+									title="Instagram"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://mobile.twitter.com/mettlenitt"
+									target="_blank"
+									class="icoLinkedin"
+									title="Twitter"
+									><i class="fa fa-twitter"></i
+								></a>
+								</li>
+								<li>
+								<a
+									href="https://www.youtube.com/c/MettleNITTrichy"
+									target="_blank"
+									class="icoYoutube"
+									title="youtube"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://medium.com/mettle-nit-trichy"
+									target="_blank"
+									class="icoMedium"
+									title="fa-medium"
+									><i class="fa fa-medium"></i
+								></a>
+							</li>
+						</ul>
+						<hr align="center" style="border-color: white; width: 320px" />
+            <p style="color: white; font-size: 15px; text-align: center">
+							Made with
+							<span style="color: #E53948; display: inline-flex; font-size: 1.8em"
+								>&hearts;</span
+							>
+							by Mettle'23
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					dynamicBullets: true,
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					570: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+					860: {
+						slidesPerView: 3,
+						spaceBetween: 15,
+					},
+					900: {
+						slidesPerView: 3,
+						spaceBetween: 25,
+					},
+				},
+			});
+		</script>
+		<script type="text/javascript">
+			var nav = document.querySelector("nav");
+			let button = document.querySelector('#navbutton');
+			button.addEventListener("click",()=>{
+				nav.classList.add("nav-bg", "shadow");
+				});
+			window.addEventListener("scroll", function () {
+				if (window.pageYOffset > 100) {
+					nav.classList.add("nav-bg", "shadow");
+				} else {
+					nav.classList.remove("nav-bg", "shadow");
+				}
+			});
+		</script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		/>
+        <script src="bower_components/aos/dist/aos.js"></script>
+        
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+			});
+		</script>
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Jan 27, 2023 00:00:00").getTime();
+			
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+			
+			  // Get today's date and time
+			  var now = new Date().getTime();
+				
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+				
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				
+			  // Output the result in an element with id="demo"
+			//   document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+			//   + minutes + " : " + seconds ;
+			  document.getElementById("d1").innerHTML= Math.floor(days/10);
+			  document.getElementById("d2").innerHTML= days%10;
+			  document.getElementById("h1").innerHTML= Math.floor(hours/10);
+			  document.getElementById("h2").innerHTML= hours%10;
+			  document.getElementById("m1").innerHTML= Math.floor(minutes/10);
+			  document.getElementById("m2").innerHTML= minutes%10;
+			  document.getElementById("s1").innerHTML= Math.floor(seconds/10);
+			  document.getElementById("s2").innerHTML= seconds%10;
+			
+			  // If the count down is over, write some text 
+			  if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("d1").innerHTML= "🥳";
+				document.getElementById("d2").innerHTML= "🥳";
+				document.getElementById("h1").innerHTML= "🎊";
+				document.getElementById("h2").innerHTML= "🎂";
+				document.getElementById("m1").innerHTML= "🎂";
+				document.getElementById("m2").innerHTML= "🎊";
+				document.getElementById("s1").innerHTML= "🥳";
+				document.getElementById("s2").innerHTML= "🥳";
+			  }
+			}, 1000);
+			</script>
+			<script type="text/javascript"  src="https://apiv2.popupsmart.com/api/Bundle/398434" async></script>
+	</body>
+</html>
