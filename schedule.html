@@ -443,6 +443,22 @@
 	  	<br>
 		<br>
 				<!--timer-->
+
+				<div id="clb" class="confetti">
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+					<div class="confetti-piece"></div>
+				</div>
 				<div style="display: flex; font-family: myHeadingFont; padding-top: 5vw;" class="timer text-center">
 					<div style="display: flex; gap: 5px; flex-direction: row;">
 						<div style="flex-direction: row; background-color: #e539471c; width: 10vw; height: 15vw; border-radius: 5px;" ><p style="font-size :10vw;" id="d1"></p></div> 
@@ -650,16 +666,17 @@
 	
 	  // If the count down is over, write some text 
 	  if (distance < 0) {
-		clearInterval(x);
-		document.getElementById("d1").innerHTML= "🥳";
-				document.getElementById("d2").innerHTML= "🥳";
-				document.getElementById("h1").innerHTML= "🎊";
-				document.getElementById("h2").innerHTML= "🎂";
-				document.getElementById("m1").innerHTML= "🎂";
-				document.getElementById("m2").innerHTML= "🎊";
-				document.getElementById("s1").innerHTML= "🥳";
-				document.getElementById("s2").innerHTML= "🥳";
-	  }
+				clearInterval(x);
+				document.getElementById("clb").style.display="flex";
+				document.getElementById("d1").innerHTML= "0";
+				document.getElementById("d2").innerHTML= "0";
+				document.getElementById("h1").innerHTML= "0";
+				document.getElementById("h2").innerHTML= "0";
+				document.getElementById("m1").innerHTML= "0";
+				document.getElementById("m2").innerHTML= "0";
+				document.getElementById("s1").innerHTML= "0";
+				document.getElementById("s2").innerHTML= "0";
+			  }
 	}, 1000);
 	</script>
 
