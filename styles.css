@@ -84,7 +84,7 @@ body {
       flex-direction: row;
     }
   }
-  @media (max-width: 650px){
+  @media (max-width: 950px){
     .index-home-buttons{
       flex-direction: column;
     }
